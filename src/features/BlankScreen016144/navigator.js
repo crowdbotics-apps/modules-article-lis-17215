@@ -1,12 +1,20 @@
 import { createStackNavigator } from "react-navigation-stack";
 
-import Blank from "./screens/blank";
+import Articles from "./index";
+import Article from "./article";
 
-export default BlankBlueprintNavigator = createStackNavigator(
-  {
-    Blank: { screen: Blank }
+export default ArticlesNavigator = createStackNavigator({
+  Articles: {
+    screen: Articles,
+    navigationOptions: ({ navigation }) => ({
+      title: "Article List",
+      headerLeft: <SlideMenuIcon navigationProps={navigation} />,
+    }),
+    params: {
+      detail: "Article"
+    }
   },
-  {
-    initialRouteName: "Blank"
-  }
-);
+  Article: {
+    screen: Article,
+  },
+});
