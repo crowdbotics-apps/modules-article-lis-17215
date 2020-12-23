@@ -31,8 +31,8 @@ function* article_readWatcher() {
 
 export default function* rootSaga() {
   const sagas = [
-  article_listWatcher,
-  article_readWatcher
+    article_listWatcher,
+    article_readWatcher
   ]
   yield all(
     sagas.map(saga =>
