@@ -2,7 +2,9 @@
 
 ## Setup
 
-Open "store/services.js" and update the `baseURL` with your application's URL.
+Open "/src/navigator/mainNavigator.js" and add the the stack navigator defined in "navigator.js".
+
+Open "/src/store/services.js" and update the `baseURL` with your application's URL.
 
 Add the module reducer and saga to your "/src/store/index.js" file:
 1. Add the imports
